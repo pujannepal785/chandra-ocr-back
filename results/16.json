@@ -1,0 +1,23 @@
+{
+  "filename": "16.jpg",
+  "model": "chandra",
+  "api_base": "http://192.168.9.1:8000/v1",
+  "image_size": {
+    "width": 304,
+    "height": 166
+  },
+  "markdown": "|  |  |  |  |\n| --- | --- | --- | --- |\n| Medicine | | | |\n| PARACETAMOL | | | |\n| Dose | 1g | ROUTE | Start date |\n| Signature | Dr. [Signature] | RO | 10/10/14 |\n| Bleep | D34 GMC No. D234567 | Frequency | 4 HRS |\n| Special instructions/directions | | Max dose per 24hrs | 4g |\n| 4 HOURLY PAIN | | Supply | Supply Check |\n|  | | Supply | Supply Check |\n| Medicines Reconciliation (circle) | | | |\n| No change | Increased dose | Decreased dose | New |",
+  "raw_html": "<div data-bbox=\"20 15 980 985\" data-label=\"Form\">\n<table border=\"1\">\n<tr>\n<td colspan=\"4\">Medicine</td>\n</tr>\n<tr>\n<td colspan=\"4\">PARACETAMOL</td>\n</tr>\n<tr>\n<td>Dose</td>\n<td>1g</td>\n<td>ROUTE</td>\n<td>Start date</td>\n</tr>\n<tr>\n<td>Signature</td>\n<td>Dr. [Signature]</td>\n<td>RO</td>\n<td>10/10/14</td>\n</tr>\n<tr>\n<td>Bleep</td>\n<td>D34 GMC No. D234567</td>\n<td>Frequency</td>\n<td>4 HRS</td>\n</tr>\n<tr>\n<td colspan=\"2\">Special instructions/directions</td>\n<td>Max dose per 24hrs</td>\n<td>4g</td>\n</tr>\n<tr>\n<td colspan=\"2\">4 HOURLY PAIN</td>\n<td>Supply</td>\n<td>Supply Check</td>\n</tr>\n<tr>\n<td colspan=\"2\"></td>\n<td>Supply</td>\n<td>Supply Check</td>\n</tr>\n<tr>\n<td colspan=\"4\">Medicines Reconciliation (circle)</td>\n</tr>\n<tr>\n<td>No change</td>\n<td>Increased dose</td>\n<td>Decreased dose</td>\n<td>New</td>\n</tr>\n</table>\n</div>",
+  "chunks": [
+    {
+      "bbox": [
+        6,
+        2,
+        298,
+        164
+      ],
+      "label": "Form",
+      "content": "<table border=\"1\">\n<tr>\n<td colspan=\"4\">Medicine</td>\n</tr>\n<tr>\n<td colspan=\"4\">PARACETAMOL</td>\n</tr>\n<tr>\n<td>Dose</td>\n<td>1g</td>\n<td>ROUTE</td>\n<td>Start date</td>\n</tr>\n<tr>\n<td>Signature</td>\n<td>Dr. [Signature]</td>\n<td>RO</td>\n<td>10/10/14</td>\n</tr>\n<tr>\n<td>Bleep</td>\n<td>D34 GMC No. D234567</td>\n<td>Frequency</td>\n<td>4 HRS</td>\n</tr>\n<tr>\n<td colspan=\"2\">Special instructions/directions</td>\n<td>Max dose per 24hrs</td>\n<td>4g</td>\n</tr>\n<tr>\n<td colspan=\"2\">4 HOURLY PAIN</td>\n<td>Supply</td>\n<td>Supply Check</td>\n</tr>\n<tr>\n<td colspan=\"2\"></td>\n<td>Supply</td>\n<td>Supply Check</td>\n</tr>\n<tr>\n<td colspan=\"4\">Medicines Reconciliation (circle)</td>\n</tr>\n<tr>\n<td>No change</td>\n<td>Increased dose</td>\n<td>Decreased dose</td>\n<td>New</td>\n</tr>\n</table>"
+    }
+  ]
+}

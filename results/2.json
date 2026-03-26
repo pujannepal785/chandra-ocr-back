@@ -1,0 +1,303 @@
+{
+  "filename": "2.jpg",
+  "model": "chandra",
+  "api_base": "http://192.168.9.1:8000/v1",
+  "image_size": {
+    "width": 720,
+    "height": 1280
+  },
+  "markdown": "# Dr. R.Keshwani\n\nM.B.B.S., PGDHS (Diabetology)\n\nGeneral Physician and Diabetologist\n\nConsultant Diabetologist : Sunahine Hospital,\n\nPace Hospital, Dr. Agarwal's Eye Hospital,\n\nSecunderabad Womens Hospital.\n\nEx. Resident : Care Hospital\n\nMobile No : 98490 36918\n\nClinic : 9700807556\n\nE-mail : drkeshwani@gmail.com\n\nTiming : 10.00 A.M. TO 2.00 P.M.\n\nEvening : 6.00 P.M. TO 9.30 P.M.\n\nSunday : 10A.M. to 1P.M.\n\nR\n\nMs. Prathwita\n\nDate : 15-03-17\n\n→ Acute GIP  \n= Dehydration\n\n1. TAB OFLAZEST OZ - (6)\n\n1 \\_\\_\\_\\_\\_ 1\n\n2. TAB AZENAC-NR - (6)\n\n1 \\_\\_\\_\\_\\_ 1\n\n3. TAB ANDIAL (5)\n\n2 Chw 1 Chw 1\n\n4. TAB ZOFER U-V - (6)\n\n1 \\_\\_\\_\\_\\_ 1\n\n} 3 days\n\nElewani\n\nR. Keshwani Health Centre\n\nSecunderabad-500 003. A.P., INDIA",
+  "raw_html": "<div data-bbox=\"121 90 419 118\" data-label=\"Section-Header\"><h1>Dr. R.Keshwani</h1></div><div data-bbox=\"119 113 381 134\" data-label=\"Text\"><p>M.B.B.S., PGDHS (Diabetology)</p></div><div data-bbox=\"119 131 480 153\" data-label=\"Text\"><p>General Physician and Diabetologist</p></div><div data-bbox=\"119 146 566 170\" data-label=\"Text\"><p>Consultant Diabetologist : Sunahine Hospital,</p></div><div data-bbox=\"119 160 539 184\" data-label=\"Text\"><p>Pace Hospital, Dr. Agarwal's Eye Hospital,</p></div><div data-bbox=\"119 175 444 196\" data-label=\"Text\"><p>Secunderabad Womens Hospital.</p></div><div data-bbox=\"119 188 401 209\" data-label=\"Text\"><p>Ex. Resident : Care Hospital</p></div><div data-bbox=\"704 101 930 114\" data-label=\"Text\"><p>Mobile No : 98490 36918</p></div><div data-bbox=\"752 113 930 126\" data-label=\"Text\"><p>Clinic : 9700807556</p></div><div data-bbox=\"645 125 934 138\" data-label=\"Text\"><p>E-mail : drkeshwani@gmail.com</p></div><div data-bbox=\"635 137 934 151\" data-label=\"Text\"><p>Timing : 10.00 A.M. TO 2.00 P.M.</p></div><div data-bbox=\"639 149 934 163\" data-label=\"Text\"><p>Evening : 6.00 P.M. TO 9.30 P.M.</p></div><div data-bbox=\"704 161 934 174\" data-label=\"Text\"><p>Sunday : 10A.M. to 1P.M.</p></div><div data-bbox=\"117 213 161 243\" data-label=\"Text\"><p>R</p></div><div data-bbox=\"240 210 470 236\" data-label=\"Text\"><p><u>Ms. Prathwita</u></p></div><div data-bbox=\"667 223 897 243\" data-label=\"Text\"><p>Date : 15-03-17</p></div><div data-bbox=\"651 255 950 311\" data-label=\"Text\"><p>→ Acute GIP<br/>= Dehydration</p></div><div data-bbox=\"74 275 523 308\" data-label=\"Text\"><p>1. TAB OFLAZEST OZ - (6)</p></div><div data-bbox=\"149 315 354 340\" data-label=\"Text\"><p>1 _____ 1</p></div><div data-bbox=\"69 353 516 386\" data-label=\"Text\"><p>2. TAB AZENAC-NR - (6)</p></div><div data-bbox=\"162 388 369 416\" data-label=\"Text\"><p>1 _____ 1</p></div><div data-bbox=\"69 433 375 470\" data-label=\"Text\"><p>3. TAB ANDIAL (5)</p></div><div data-bbox=\"171 470 473 500\" data-label=\"Text\"><p>2 <u>Chw</u> 1 <u>Chw</u> 1</p></div><div data-bbox=\"67 513 569 553\" data-label=\"Text\"><p>4. TAB ZOFER U-V - (6)</p></div><div data-bbox=\"171 557 467 591\" data-label=\"Text\"><p>1 _____ 1</p></div><div data-bbox=\"618 474 750 510\" data-label=\"Text\"><p>} 3 days</p></div><div data-bbox=\"646 521 875 589\" data-label=\"Text\"><p><u>Elewani</u></p></div><div data-bbox=\"412 870 743 897\" data-label=\"Text\"><p>R. Keshwani Health Centre</p></div><div data-bbox=\"412 899 925 918\" data-label=\"Text\"><p>Secunderabad-500 003. A.P., INDIA</p></div>",
+  "chunks": [
+    {
+      "bbox": [
+        87,
+        115,
+        302,
+        151
+      ],
+      "label": "Section-Header",
+      "content": "<h1>Dr. R.Keshwani</h1>"
+    },
+    {
+      "bbox": [
+        86,
+        145,
+        274,
+        172
+      ],
+      "label": "Text",
+      "content": "<p>M.B.B.S., PGDHS (Diabetology)</p>"
+    },
+    {
+      "bbox": [
+        86,
+        168,
+        346,
+        196
+      ],
+      "label": "Text",
+      "content": "<p>General Physician and Diabetologist</p>"
+    },
+    {
+      "bbox": [
+        86,
+        187,
+        408,
+        218
+      ],
+      "label": "Text",
+      "content": "<p>Consultant Diabetologist : Sunahine Hospital,</p>"
+    },
+    {
+      "bbox": [
+        86,
+        205,
+        388,
+        236
+      ],
+      "label": "Text",
+      "content": "<p>Pace Hospital, Dr. Agarwal's Eye Hospital,</p>"
+    },
+    {
+      "bbox": [
+        86,
+        224,
+        320,
+        251
+      ],
+      "label": "Text",
+      "content": "<p>Secunderabad Womens Hospital.</p>"
+    },
+    {
+      "bbox": [
+        86,
+        241,
+        289,
+        268
+      ],
+      "label": "Text",
+      "content": "<p>Ex. Resident : Care Hospital</p>"
+    },
+    {
+      "bbox": [
+        507,
+        129,
+        670,
+        146
+      ],
+      "label": "Text",
+      "content": "<p>Mobile No : 98490 36918</p>"
+    },
+    {
+      "bbox": [
+        541,
+        145,
+        670,
+        161
+      ],
+      "label": "Text",
+      "content": "<p>Clinic : 9700807556</p>"
+    },
+    {
+      "bbox": [
+        464,
+        160,
+        672,
+        177
+      ],
+      "label": "Text",
+      "content": "<p>E-mail : drkeshwani@gmail.com</p>"
+    },
+    {
+      "bbox": [
+        457,
+        175,
+        672,
+        193
+      ],
+      "label": "Text",
+      "content": "<p>Timing : 10.00 A.M. TO 2.00 P.M.</p>"
+    },
+    {
+      "bbox": [
+        460,
+        191,
+        672,
+        209
+      ],
+      "label": "Text",
+      "content": "<p>Evening : 6.00 P.M. TO 9.30 P.M.</p>"
+    },
+    {
+      "bbox": [
+        507,
+        206,
+        672,
+        223
+      ],
+      "label": "Text",
+      "content": "<p>Sunday : 10A.M. to 1P.M.</p>"
+    },
+    {
+      "bbox": [
+        84,
+        273,
+        116,
+        311
+      ],
+      "label": "Text",
+      "content": "<p>R</p>"
+    },
+    {
+      "bbox": [
+        173,
+        269,
+        338,
+        302
+      ],
+      "label": "Text",
+      "content": "<p><u>Ms. Prathwita</u></p>"
+    },
+    {
+      "bbox": [
+        480,
+        285,
+        646,
+        311
+      ],
+      "label": "Text",
+      "content": "<p>Date : 15-03-17</p>"
+    },
+    {
+      "bbox": [
+        469,
+        326,
+        684,
+        398
+      ],
+      "label": "Text",
+      "content": "<p>→ Acute GIP<br/>= Dehydration</p>"
+    },
+    {
+      "bbox": [
+        53,
+        352,
+        377,
+        394
+      ],
+      "label": "Text",
+      "content": "<p>1. TAB OFLAZEST OZ - (6)</p>"
+    },
+    {
+      "bbox": [
+        107,
+        403,
+        255,
+        435
+      ],
+      "label": "Text",
+      "content": "<p>1 _____ 1</p>"
+    },
+    {
+      "bbox": [
+        50,
+        452,
+        372,
+        494
+      ],
+      "label": "Text",
+      "content": "<p>2. TAB AZENAC-NR - (6)</p>"
+    },
+    {
+      "bbox": [
+        117,
+        497,
+        266,
+        532
+      ],
+      "label": "Text",
+      "content": "<p>1 _____ 1</p>"
+    },
+    {
+      "bbox": [
+        50,
+        554,
+        270,
+        602
+      ],
+      "label": "Text",
+      "content": "<p>3. TAB ANDIAL (5)</p>"
+    },
+    {
+      "bbox": [
+        123,
+        602,
+        341,
+        640
+      ],
+      "label": "Text",
+      "content": "<p>2 <u>Chw</u> 1 <u>Chw</u> 1</p>"
+    },
+    {
+      "bbox": [
+        48,
+        657,
+        410,
+        708
+      ],
+      "label": "Text",
+      "content": "<p>4. TAB ZOFER U-V - (6)</p>"
+    },
+    {
+      "bbox": [
+        123,
+        713,
+        336,
+        756
+      ],
+      "label": "Text",
+      "content": "<p>1 _____ 1</p>"
+    },
+    {
+      "bbox": [
+        445,
+        607,
+        540,
+        653
+      ],
+      "label": "Text",
+      "content": "<p>} 3 days</p>"
+    },
+    {
+      "bbox": [
+        465,
+        667,
+        630,
+        754
+      ],
+      "label": "Text",
+      "content": "<p><u>Elewani</u></p>"
+    },
+    {
+      "bbox": [
+        297,
+        1114,
+        535,
+        1148
+      ],
+      "label": "Text",
+      "content": "<p>R. Keshwani Health Centre</p>"
+    },
+    {
+      "bbox": [
+        297,
+        1151,
+        666,
+        1175
+      ],
+      "label": "Text",
+      "content": "<p>Secunderabad-500 003. A.P., INDIA</p>"
+    }
+  ]
+}
