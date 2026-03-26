@@ -1,0 +1,93 @@
+{
+  "filename": "31_1.jpg",
+  "model": "chandra",
+  "api_base": "http://192.168.9.1:8000/v1",
+  "image_size": {
+    "width": 400,
+    "height": 435
+  },
+  "markdown": "Dr. Alfred Sauls  \n151212 S. High Rd., Chicago, IL 23875  \n954-555-1300\n\nName: Alan Johnson 92 Ibis Lane\n\nRx: Erythromycin ethylsuccinate  \n400 mg/5 mL\n\nDisp: 100 mL\n\nSig:        tsp. q.i.d. until all  \nmedication is taken.\n\nDispense as written\n\nDr. Alfred Sauls\n\nMay substitute",
+  "raw_html": "<div data-bbox=\"161 20 839 148\" data-label=\"Text\"><p>Dr. Alfred Sauls<br/>151212 S. High Rd., Chicago, IL 23875<br/>954-555-1300</p></div><div data-bbox=\"23 261 968 304\" data-label=\"Text\"><p>Name: <u>Alan Johnson</u> 92 Ibis Lane</p></div><div data-bbox=\"23 347 941 535\" data-label=\"Text\"><p>Rx: <u>Erythromycin ethylsuccinate</u><br/><u>400 mg/5 mL</u></p></div><div data-bbox=\"23 561 369 626\" data-label=\"Text\"><p>Disp: <u>100 mL</u></p></div><div data-bbox=\"23 665 884 853\" data-label=\"Text\"><p>Sig: <u>      </u> <u>tsp. q.i.d. until all</u><br/><u>medication is taken.</u></p></div><div data-bbox=\"23 937 321 971\" data-label=\"Text\"><p>Dispense as written</p></div><div data-bbox=\"587 869 902 923\" data-label=\"Text\"><p><u>Dr. Alfred Sauls</u></p></div><div data-bbox=\"587 937 816 971\" data-label=\"Text\"><p>May substitute</p></div>",
+  "chunks": [
+    {
+      "bbox": [
+        64,
+        9,
+        336,
+        64
+      ],
+      "label": "Text",
+      "content": "<p>Dr. Alfred Sauls<br/>151212 S. High Rd., Chicago, IL 23875<br/>954-555-1300</p>"
+    },
+    {
+      "bbox": [
+        9,
+        114,
+        387,
+        132
+      ],
+      "label": "Text",
+      "content": "<p>Name: <u>Alan Johnson</u> 92 Ibis Lane</p>"
+    },
+    {
+      "bbox": [
+        9,
+        151,
+        376,
+        233
+      ],
+      "label": "Text",
+      "content": "<p>Rx: <u>Erythromycin ethylsuccinate</u><br/><u>400 mg/5 mL</u></p>"
+    },
+    {
+      "bbox": [
+        9,
+        244,
+        148,
+        272
+      ],
+      "label": "Text",
+      "content": "<p>Disp: <u>100 mL</u></p>"
+    },
+    {
+      "bbox": [
+        9,
+        289,
+        354,
+        371
+      ],
+      "label": "Text",
+      "content": "<p>Sig: <u>      </u> <u>tsp. q.i.d. until all</u><br/><u>medication is taken.</u></p>"
+    },
+    {
+      "bbox": [
+        9,
+        408,
+        128,
+        422
+      ],
+      "label": "Text",
+      "content": "<p>Dispense as written</p>"
+    },
+    {
+      "bbox": [
+        235,
+        378,
+        361,
+        402
+      ],
+      "label": "Text",
+      "content": "<p><u>Dr. Alfred Sauls</u></p>"
+    },
+    {
+      "bbox": [
+        235,
+        408,
+        326,
+        422
+      ],
+      "label": "Text",
+      "content": "<p>May substitute</p>"
+    }
+  ]
+}

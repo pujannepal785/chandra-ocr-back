@@ -1,6 +1,7 @@
 import json
 import mimetypes
 import os
+import re
 from pathlib import Path
 
 import requests
@@ -98,10 +99,49 @@ def save_uploaded_files(uploaded_files) -> tuple[list[str], list[str]]:
     return saved_names, skipped_messages
 
 
+CROPS_DIR = RESULTS_DIR / "crops"
+
+
+def extract_and_save_crops(image_path: Path, chunks: list[dict]) -> list[Path]:
+    """Crop image regions (label=Image/Figure) from the original and save them."""
+    image_chunks = [c for c in chunks if c.get("label") in ("Image", "Figure") and c.get("bbox")]
+    if not image_chunks:
+        return []
+
+    crop_dir = CROPS_DIR / image_path.stem
+    crop_dir.mkdir(parents=True, exist_ok=True)
+
+    original = Image.open(image_path).convert("RGB")
+    saved = []
+    for i, chunk in enumerate(image_chunks):
+        x0, y0, x1, y1 = chunk["bbox"]
+        cropped = original.crop((x0, y0, x1, y1))
+        crop_path = crop_dir / f"{i}_{chunk['label'].lower()}.png"
+        cropped.save(crop_path)
+        saved.append(crop_path)
+    return saved
+
+
+def get_crop_paths(image_path: Path) -> list[Path]:
+    """Get saved crop paths for an image."""
+    crop_dir = CROPS_DIR / image_path.stem
+    if not crop_dir.exists():
+        return []
+    return sorted(crop_dir.glob("*.png"))
+
+
 def make_thumbnail(image: Image.Image, size: int = 100) -> Image.Image:
     thumb = image.copy()
     thumb.thumbnail((size, size))
     return thumb
+
+
+def strip_html(html: str) -> str:
+    """Strip HTML tags and collapse whitespace to get plain text."""
+    text = re.sub(r"<br\s*/?>", "\n", html)
+    text = re.sub(r"<[^>]+>", "", text)
+    text = text.replace("&amp;", "&").replace("&lt;", "<").replace("&gt;", ">")
+    return text.strip()
 
 
 def draw_bboxes(image: Image.Image, chunks: list[dict]) -> Image.Image:
@@ -112,7 +152,7 @@ def draw_bboxes(image: Image.Image, chunks: list[dict]) -> Image.Image:
     except (OSError, IOError):
         font = ImageFont.load_default()
 
-    for chunk in chunks:
+    for i, chunk in enumerate(chunks):
         bbox = chunk.get("bbox")
         label = chunk.get("label", "Unknown")
         if not bbox:
@@ -133,6 +173,100 @@ def draw_bboxes(image: Image.Image, chunks: list[dict]) -> Image.Image:
         draw.rectangle([tag_x, tag_y, tag_x + tw + 8, tag_y + th + 4], fill=color)
         draw.text((tag_x + 4, tag_y + 1), label, fill="white", font=font)
     return overlay.convert("RGB")
+
+
+def image_to_base64(image: Image.Image) -> str:
+    """Convert PIL image to base64 data URL."""
+    from io import BytesIO
+    buf = BytesIO()
+    image.save(buf, format="PNG")
+    import base64
+    return f"data:image/png;base64,{base64.b64encode(buf.getvalue()).decode()}"
+
+
+def render_interactive_image(image: Image.Image, chunks: list[dict], key: str = "bbox_img") -> None:
+    """Render annotated image with hover tooltips on each bounding box."""
+    annotated = draw_bboxes(image, chunks)
+    img_w, img_h = annotated.size
+    b64 = image_to_base64(annotated)
+
+    # Build overlay divs for each chunk bbox
+    overlays = ""
+    for i, chunk in enumerate(chunks):
+        bbox = chunk.get("bbox")
+        if not bbox:
+            continue
+        x0, y0, x1, y1 = bbox
+        label = chunk.get("label", "Unknown")
+        text = strip_html(chunk.get("content", "")).replace('"', "&quot;").replace("\n", "&#10;")
+        color = LABEL_COLORS.get(label, DEFAULT_COLOR)
+
+        # Convert pixel coords to percentages
+        left_pct = x0 / img_w * 100
+        top_pct = y0 / img_h * 100
+        w_pct = (x1 - x0) / img_w * 100
+        h_pct = (y1 - y0) / img_h * 100
+
+        tooltip_text = f"[{label}] {text}"
+
+        overlays += f'''<div class="bbox-overlay" style="
+            left:{left_pct:.2f}%;top:{top_pct:.2f}%;
+            width:{w_pct:.2f}%;height:{h_pct:.2f}%;
+            border:2px solid transparent;"
+            data-label="{label}" data-color="{color}">
+            <div class="bbox-tooltip">{tooltip_text}</div>
+        </div>'''
+
+    html = f'''
+    <style>
+    .bbox-container {{
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }}
+    .bbox-container img {{
+        width: 100%;
+        display: block;
+    }}
+    .bbox-overlay {{
+        position: absolute;
+        cursor: pointer;
+        transition: all 0.15s;
+    }}
+    .bbox-overlay:hover {{
+        border-color: attr(data-color) !important;
+        background: rgba(255,0,0,0.1);
+        border: 2px solid red !important;
+    }}
+    .bbox-tooltip {{
+        display: none;
+        position: absolute;
+        bottom: 105%;
+        left: 0;
+        background: rgba(0,0,0,0.9);
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 13px;
+        line-height: 1.4;
+        max-width: 350px;
+        min-width: 150px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        z-index: 1000;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        pointer-events: none;
+    }}
+    .bbox-overlay:hover .bbox-tooltip {{
+        display: block;
+    }}
+    </style>
+    <div class="bbox-container">
+        <img src="{b64}" />
+        {overlays}
+    </div>
+    '''
+    st.components.v1.html(html, height=int(img_h * 800 / img_w) + 20, scrolling=False)
 
 
 def call_ocr_api(api_base: str, image_path: Path) -> tuple[dict | None, str | None]:
@@ -236,6 +370,7 @@ def process_selected_images(api_base: str) -> None:
             continue
 
         result_path.write_text(json.dumps(result, indent=2, ensure_ascii=False))
+        extract_and_save_crops(image_path, result.get("chunks", []))
         processed.append(image_path.name)
 
     progress.progress(1.0, text="Processing complete.")
@@ -472,8 +607,7 @@ with workspace_tab:
             col_image, col_text = st.columns([1.1, 1], gap="large")
 
             with col_image:
-                annotated = draw_bboxes(original, filtered_chunks)
-                st.image(annotated, width="stretch")
+                render_interactive_image(original, filtered_chunks, key="ws_img")
                 st.caption(f"{len(filtered_chunks)} visible blocks")
                 labels_found = sorted({chunk.get("label", "") for chunk in filtered_chunks if chunk.get("label")})
                 if labels_found:
@@ -485,22 +619,37 @@ with workspace_tab:
                     st.markdown(legend, unsafe_allow_html=True)
 
             with col_text:
-                tab_md, tab_chunks, tab_html, tab_json = st.tabs(["Markdown", "Chunks", "HTML", "JSON"])
+                tab_md, tab_chunks_tab, tab_images, tab_html, tab_json = st.tabs(
+                    ["Markdown", "Chunks", "Extracted Images", "HTML", "JSON"]
+                )
                 with tab_md:
-                    st.markdown(result.get("markdown", ""))
-                with tab_chunks:
+                    st.markdown(result.get("markdown", ""), unsafe_allow_html=True)
+                with tab_chunks_tab:
                     if not filtered_chunks:
                         st.info("No chunks matched the current label filter.")
                     for chunk in filtered_chunks:
                         label = chunk.get("label", "Unknown")
                         color = LABEL_COLORS.get(label, DEFAULT_COLOR)
                         st.markdown(
-                            f'<div class="chunk-card" style="border-left-color:{color};">'
+                            f'<div class="chunk-card" style="border-left:4px solid {color};">'
                             f'<div class="chunk-label" style="color:{color};">{label}</div>'
                             f'<div class="chunk-bbox">bbox: {chunk.get("bbox")}</div>'
                             f'<div>{chunk.get("content", "")}</div></div>',
                             unsafe_allow_html=True,
                         )
+                with tab_images:
+                    crop_paths = get_crop_paths(image_path)
+                    if not crop_paths:
+                        # Try extracting now if crops don't exist yet
+                        image_chunks = [c for c in chunks if c.get("label") in ("Image", "Figure") and c.get("bbox")]
+                        if image_chunks:
+                            crop_paths = extract_and_save_crops(image_path, chunks)
+                    if crop_paths:
+                        st.caption(f"{len(crop_paths)} image(s) extracted")
+                        for cp in crop_paths:
+                            st.image(str(cp), caption=cp.name, use_container_width=True)
+                    else:
+                        st.info("No Image/Figure regions detected in this document.")
                 with tab_html:
                     st.code(result.get("raw_html", ""), language="html")
                 with tab_json:
@@ -567,13 +716,12 @@ with extracted_tab:
         if linked_image_path.exists():
             with Image.open(linked_image_path) as opened_image:
                 original = opened_image.convert("RGB")
-            annotated = draw_bboxes(original, filtered_extracted_chunks)
-            st.image(annotated, width="stretch")
+            render_interactive_image(original, filtered_extracted_chunks, key="ext_img")
         else:
             st.warning(f"Original image not found for {image_filename}. Showing text output only.")
 
-        result_tab_md, result_tab_chunks, result_tab_html, result_tab_json = st.tabs(
-            ["Markdown", "Chunks", "HTML", "JSON"]
+        result_tab_md, result_tab_chunks, result_tab_images, result_tab_html, result_tab_json = st.tabs(
+            ["Markdown", "Chunks", "Extracted Images", "HTML", "JSON"]
         )
         with result_tab_md:
             st.markdown(extracted_result.get("markdown", ""))
@@ -590,6 +738,21 @@ with extracted_tab:
                     f'<div>{chunk.get("content", "")}</div></div>',
                     unsafe_allow_html=True,
                 )
+        with result_tab_images:
+            if linked_image_path.exists():
+                crop_paths = get_crop_paths(linked_image_path)
+                if not crop_paths:
+                    image_chunks = [c for c in extracted_chunks if c.get("label") in ("Image", "Figure") and c.get("bbox")]
+                    if image_chunks:
+                        crop_paths = extract_and_save_crops(linked_image_path, extracted_chunks)
+                if crop_paths:
+                    st.caption(f"{len(crop_paths)} image(s) extracted")
+                    for cp in crop_paths:
+                        st.image(str(cp), caption=cp.name, use_container_width=True)
+                else:
+                    st.info("No Image/Figure regions detected in this document.")
+            else:
+                st.warning("Original image not found — cannot extract crops.")
         with result_tab_html:
             st.code(extracted_result.get("raw_html", ""), language="html")
         with result_tab_json:

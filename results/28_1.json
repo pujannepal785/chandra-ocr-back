@@ -1,0 +1,153 @@
+{
+  "filename": "28_1.jpg",
+  "model": "chandra",
+  "api_base": "http://192.168.9.1:8000/v1",
+  "image_size": {
+    "width": 576,
+    "height": 1024
+  },
+  "markdown": "![Nanavati Hospital logo featuring a shield with a cross and dots.]()\n\n**Nanavati**\n\nSuper Speciality Hospital\n\n*a passion for healing...*\n\nIP No: 21/4643 UHID : 896539\n\nMr. Subhash Kumar Kulshreshtha\n\n73 Yrs/Male EICU/EICU1\n\nDr. Amol Anandrao Patil/ENT\n\nDOA: 16/05/2021\n\nDate: 16/5/2021\n\nInj. Liposomal Amphotericin B  \nSong → 6 vials/day  \n(300mg)  \nG. Patil\n\n![Small circular logo of Dr. Balabhai Nanavati Hospital.]()\n\nDr. Balabhai Nanavati Hospital, S.V. Road, Vile Parle (W),  \nMumbai 400 056. Tel: +91 22 26267500. [www.nanavatihospital.org](http://www.nanavatihospital.org)\n\nManaged by Radiant Life Care",
+  "raw_html": "<div data-bbox=\"99 194 178 247\" data-label=\"Image\"><img alt=\"Nanavati Hospital logo featuring a shield with a cross and dots.\"/></div><div data-bbox=\"177 189 421 228\" data-label=\"Text\"><p><b>Nanavati</b></p></div><div data-bbox=\"177 226 421 245\" data-label=\"Text\"><p>Super Speciality Hospital</p></div><div data-bbox=\"102 245 438 269\" data-label=\"Text\"><p><i>a passion for healing...</i></p></div><div data-bbox=\"165 287 527 314\" data-label=\"Text\"><p>IP No: 21/4643 UHID : 896539</p></div><div data-bbox=\"167 308 513 332\" data-label=\"Text\"><p>Mr. Subhash Kumar Kulshreshtha</p></div><div data-bbox=\"167 331 381 350\" data-label=\"Text\"><p>73 Yrs/Male EICU/EICU1</p></div><div data-bbox=\"167 351 414 369\" data-label=\"Text\"><p>Dr. Amol Anandrao Patil/ENT</p></div><div data-bbox=\"167 375 322 392\" data-label=\"Text\"><p>DOA: 16/05/2021</p></div><div data-bbox=\"733 270 994 316\" data-label=\"Text\"><p>Date: 16/5/2021</p></div><div data-bbox=\"98 437 959 752\" data-label=\"Text\"><p>Inj. Liposomal Amphotericin B<br/>Song → 6 vials/day<br/>(300mg)<br/>G. Patil</p></div><div data-bbox=\"115 909 211 961\" data-label=\"Image\"><img alt=\"Small circular logo of Dr. Balabhai Nanavati Hospital.\"/></div><div data-bbox=\"231 910 947 958\" data-label=\"Text\"><p>Dr. Balabhai Nanavati Hospital, S.V. Road, Vile Parle (W),<br/>Mumbai 400 056. Tel: +91 22 26267500. <a href=\"http://www.nanavatihospital.org\">www.nanavatihospital.org</a></p></div><div data-bbox=\"231 950 596 970\" data-label=\"Text\"><p>Managed by Radiant Life Care</p></div>",
+  "chunks": [
+    {
+      "bbox": [
+        57,
+        199,
+        103,
+        253
+      ],
+      "label": "Image",
+      "content": "<img alt=\"Nanavati Hospital logo featuring a shield with a cross and dots.\"/>"
+    },
+    {
+      "bbox": [
+        102,
+        194,
+        242,
+        233
+      ],
+      "label": "Text",
+      "content": "<p><b>Nanavati</b></p>"
+    },
+    {
+      "bbox": [
+        102,
+        231,
+        242,
+        251
+      ],
+      "label": "Text",
+      "content": "<p>Super Speciality Hospital</p>"
+    },
+    {
+      "bbox": [
+        59,
+        251,
+        252,
+        275
+      ],
+      "label": "Text",
+      "content": "<p><i>a passion for healing...</i></p>"
+    },
+    {
+      "bbox": [
+        95,
+        294,
+        304,
+        322
+      ],
+      "label": "Text",
+      "content": "<p>IP No: 21/4643 UHID : 896539</p>"
+    },
+    {
+      "bbox": [
+        96,
+        315,
+        295,
+        340
+      ],
+      "label": "Text",
+      "content": "<p>Mr. Subhash Kumar Kulshreshtha</p>"
+    },
+    {
+      "bbox": [
+        96,
+        339,
+        219,
+        358
+      ],
+      "label": "Text",
+      "content": "<p>73 Yrs/Male EICU/EICU1</p>"
+    },
+    {
+      "bbox": [
+        96,
+        359,
+        238,
+        378
+      ],
+      "label": "Text",
+      "content": "<p>Dr. Amol Anandrao Patil/ENT</p>"
+    },
+    {
+      "bbox": [
+        96,
+        384,
+        185,
+        401
+      ],
+      "label": "Text",
+      "content": "<p>DOA: 16/05/2021</p>"
+    },
+    {
+      "bbox": [
+        422,
+        276,
+        573,
+        324
+      ],
+      "label": "Text",
+      "content": "<p>Date: 16/5/2021</p>"
+    },
+    {
+      "bbox": [
+        56,
+        447,
+        552,
+        770
+      ],
+      "label": "Text",
+      "content": "<p>Inj. Liposomal Amphotericin B<br/>Song → 6 vials/day<br/>(300mg)<br/>G. Patil</p>"
+    },
+    {
+      "bbox": [
+        66,
+        931,
+        122,
+        984
+      ],
+      "label": "Image",
+      "content": "<img alt=\"Small circular logo of Dr. Balabhai Nanavati Hospital.\"/>"
+    },
+    {
+      "bbox": [
+        133,
+        932,
+        545,
+        981
+      ],
+      "label": "Text",
+      "content": "<p>Dr. Balabhai Nanavati Hospital, S.V. Road, Vile Parle (W),<br/>Mumbai 400 056. Tel: +91 22 26267500. <a href=\"http://www.nanavatihospital.org\">www.nanavatihospital.org</a></p>"
+    },
+    {
+      "bbox": [
+        133,
+        973,
+        343,
+        993
+      ],
+      "label": "Text",
+      "content": "<p>Managed by Radiant Life Care</p>"
+    }
+  ]
+}

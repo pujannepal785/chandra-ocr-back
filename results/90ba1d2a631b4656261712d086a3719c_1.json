@@ -1,0 +1,373 @@
+{
+  "filename": "90ba1d2a631b4656261712d086a3719c_1.jpg",
+  "model": "chandra",
+  "api_base": "http://192.168.9.1:8000/v1",
+  "image_size": {
+    "width": 750,
+    "height": 1000
+  },
+  "markdown": "DATE28/10/20INR - 2.23 LVEF - 50%HbA1c - 6.80Pt is not availableRx.T. clozapid A (75) } After dinnerT. Rozavel (20)T. Starpress xL (50) after b. fastT. Dytar (5) mg daily at 8 A.MT. Silodal (8) mg daily after dinnerT. Waet 5 gpm daily at 6 P.MEchlipid profile16/02/21LVEF - 60%TA - 68HbA1c - 7INR - 2.2COL - 33HbA1c - 9.0HDL - 42Pkt - 32.5Rx.T. clozapid A (75) } After dinnerT. Rozavel (20)T. Starpress xL 50 mg after b. fastT. Dytar 5 mg daily at 8 A.MT. Silodal 8 mg daily after dinnerT. Waet 5 gpm daily at 6 P.M (1 mm)Echlipid profile4 mmBP - 120/80 mmIndraprastha Apollo HospitalsSarla Vihar, Delhi-Mathura Road, New Delhi-110078 (India) Tel: 91-11-26625558, 26925801 Fax: 91-11-41676781 Website: www.apolloshospdelhi.com  \nFor appointment contact: 9811953538, 9899710473, 011-29871042",
+  "raw_html": "<div data-bbox=\"151 77 208 94\" data-label=\"Text\">DATE</div>\n<div data-bbox=\"125 96 234 121\" data-label=\"Text\">28/10/20</div>\n<div data-bbox=\"250 76 671 117\" data-label=\"Text\">INR - 2.23 LVEF - <u>50%</u></div>\n<div data-bbox=\"250 111 444 144\" data-label=\"Text\">HbA1c - 6.80</div>\n<div data-bbox=\"274 133 619 179\" data-label=\"Text\">Pt is not available</div>\n<div data-bbox=\"266 193 317 219\" data-label=\"Text\">Rx.</div>\n<div data-bbox=\"294 203 813 256\" data-label=\"Text\">T. clozapid A (75) } After dinner</div>\n<div data-bbox=\"296 243 531 277\" data-label=\"Text\">T. Rozavel (20)</div>\n<div data-bbox=\"296 245 886 309\" data-label=\"Text\">T. Starpress xL (50) after b. fast</div>\n<div data-bbox=\"294 287 893 343\" data-label=\"Text\">T. Dytar (5) mg daily at 8 A.M</div>\n<div data-bbox=\"290 316 937 375\" data-label=\"Text\">T. Silodal (8) mg daily after dinner</div>\n<div data-bbox=\"289 357 950 415\" data-label=\"Text\">T. Waet 5 gpm daily at 6 P.M</div>\n<div data-bbox=\"114 421 190 448\" data-label=\"Text\">Ech</div>\n<div data-bbox=\"114 448 208 493\" data-label=\"Text\">lipid profile</div>\n<div data-bbox=\"102 524 208 552\" data-label=\"Text\">16/02/21</div>\n<div data-bbox=\"231 499 432 532\" data-label=\"Text\">LVEF - 60%</div>\n<div data-bbox=\"449 482 549 516\" data-label=\"Text\">TA - 68</div>\n<div data-bbox=\"600 474 753 503\" data-label=\"Text\">HbA1c - <u>7</u></div>\n<div data-bbox=\"231 528 393 557\" data-label=\"Text\">INR - 2.2</div>\n<div data-bbox=\"442 515 591 540\" data-label=\"Text\">COL - 33</div>\n<div data-bbox=\"231 553 378 579\" data-label=\"Text\">HbA1c - 9.0</div>\n<div data-bbox=\"442 540 604 567\" data-label=\"Text\">HDL - 42</div>\n<div data-bbox=\"231 574 402 599\" data-label=\"Text\">Pkt - 32.5</div>\n<div data-bbox=\"247 604 290 631\" data-label=\"Text\">Rx.</div>\n<div data-bbox=\"290 613 824 662\" data-label=\"Text\">T. clozapid A (75) } After dinner</div>\n<div data-bbox=\"296 648 549 682\" data-label=\"Text\">T. Rozavel (20)</div>\n<div data-bbox=\"296 662 875 711\" data-label=\"Text\">T. Starpress xL 50 mg after b. fast</div>\n<div data-bbox=\"290 698 858 744\" data-label=\"Text\">T. Dytar 5 mg daily at 8 A.M</div>\n<div data-bbox=\"290 728 875 774\" data-label=\"Text\">T. Silodal 8 mg daily after dinner</div>\n<div data-bbox=\"287 767 1000 817\" data-label=\"Text\">T. Waet 5 gpm daily at 6 P.M (1 mm)</div>\n<div data-bbox=\"114 807 190 834\" data-label=\"Text\">Ech</div>\n<div data-bbox=\"104 834 208 880\" data-label=\"Text\">lipid profile</div>\n<div data-bbox=\"231 854 338 885\" data-label=\"Text\">4 mm</div>\n<div data-bbox=\"773 441 994 538\" data-label=\"Text\">BP - 120/80 mm</div>\n<div data-bbox=\"343 929 680 962\" data-label=\"Text\">Indraprastha Apollo Hospitals</div>\n<div data-bbox=\"109 948 988 1000\" data-label=\"Text\">Sarla Vihar, Delhi-Mathura Road, New Delhi-110078 (India) Tel: 91-11-26625558, 26925801 Fax: 91-11-41676781 Website: www.apolloshospdelhi.com<br/>For appointment contact: 9811953538, 9899710473, 011-29871042</div>",
+  "chunks": [
+    {
+      "bbox": [
+        113,
+        77,
+        156,
+        94
+      ],
+      "label": "Text",
+      "content": "DATE"
+    },
+    {
+      "bbox": [
+        94,
+        96,
+        176,
+        121
+      ],
+      "label": "Text",
+      "content": "28/10/20"
+    },
+    {
+      "bbox": [
+        188,
+        76,
+        503,
+        117
+      ],
+      "label": "Text",
+      "content": "INR - 2.23 LVEF - <u>50%</u>"
+    },
+    {
+      "bbox": [
+        188,
+        111,
+        333,
+        144
+      ],
+      "label": "Text",
+      "content": "HbA1c - 6.80"
+    },
+    {
+      "bbox": [
+        206,
+        133,
+        464,
+        179
+      ],
+      "label": "Text",
+      "content": "Pt is not available"
+    },
+    {
+      "bbox": [
+        200,
+        193,
+        238,
+        219
+      ],
+      "label": "Text",
+      "content": "Rx."
+    },
+    {
+      "bbox": [
+        220,
+        203,
+        610,
+        256
+      ],
+      "label": "Text",
+      "content": "T. clozapid A (75) } After dinner"
+    },
+    {
+      "bbox": [
+        222,
+        243,
+        398,
+        277
+      ],
+      "label": "Text",
+      "content": "T. Rozavel (20)"
+    },
+    {
+      "bbox": [
+        222,
+        245,
+        664,
+        309
+      ],
+      "label": "Text",
+      "content": "T. Starpress xL (50) after b. fast"
+    },
+    {
+      "bbox": [
+        220,
+        287,
+        670,
+        343
+      ],
+      "label": "Text",
+      "content": "T. Dytar (5) mg daily at 8 A.M"
+    },
+    {
+      "bbox": [
+        218,
+        316,
+        703,
+        375
+      ],
+      "label": "Text",
+      "content": "T. Silodal (8) mg daily after dinner"
+    },
+    {
+      "bbox": [
+        217,
+        357,
+        712,
+        415
+      ],
+      "label": "Text",
+      "content": "T. Waet 5 gpm daily at 6 P.M"
+    },
+    {
+      "bbox": [
+        86,
+        421,
+        142,
+        448
+      ],
+      "label": "Text",
+      "content": "Ech"
+    },
+    {
+      "bbox": [
+        86,
+        448,
+        156,
+        493
+      ],
+      "label": "Text",
+      "content": "lipid profile"
+    },
+    {
+      "bbox": [
+        76,
+        524,
+        156,
+        552
+      ],
+      "label": "Text",
+      "content": "16/02/21"
+    },
+    {
+      "bbox": [
+        173,
+        499,
+        324,
+        532
+      ],
+      "label": "Text",
+      "content": "LVEF - 60%"
+    },
+    {
+      "bbox": [
+        337,
+        482,
+        412,
+        516
+      ],
+      "label": "Text",
+      "content": "TA - 68"
+    },
+    {
+      "bbox": [
+        450,
+        474,
+        565,
+        503
+      ],
+      "label": "Text",
+      "content": "HbA1c - <u>7</u>"
+    },
+    {
+      "bbox": [
+        173,
+        528,
+        295,
+        557
+      ],
+      "label": "Text",
+      "content": "INR - 2.2"
+    },
+    {
+      "bbox": [
+        332,
+        515,
+        443,
+        540
+      ],
+      "label": "Text",
+      "content": "COL - 33"
+    },
+    {
+      "bbox": [
+        173,
+        553,
+        284,
+        579
+      ],
+      "label": "Text",
+      "content": "HbA1c - 9.0"
+    },
+    {
+      "bbox": [
+        332,
+        540,
+        453,
+        567
+      ],
+      "label": "Text",
+      "content": "HDL - 42"
+    },
+    {
+      "bbox": [
+        173,
+        574,
+        302,
+        599
+      ],
+      "label": "Text",
+      "content": "Pkt - 32.5"
+    },
+    {
+      "bbox": [
+        185,
+        604,
+        218,
+        631
+      ],
+      "label": "Text",
+      "content": "Rx."
+    },
+    {
+      "bbox": [
+        218,
+        613,
+        618,
+        662
+      ],
+      "label": "Text",
+      "content": "T. clozapid A (75) } After dinner"
+    },
+    {
+      "bbox": [
+        222,
+        648,
+        412,
+        682
+      ],
+      "label": "Text",
+      "content": "T. Rozavel (20)"
+    },
+    {
+      "bbox": [
+        222,
+        662,
+        656,
+        711
+      ],
+      "label": "Text",
+      "content": "T. Starpress xL 50 mg after b. fast"
+    },
+    {
+      "bbox": [
+        218,
+        698,
+        644,
+        744
+      ],
+      "label": "Text",
+      "content": "T. Dytar 5 mg daily at 8 A.M"
+    },
+    {
+      "bbox": [
+        218,
+        728,
+        656,
+        774
+      ],
+      "label": "Text",
+      "content": "T. Silodal 8 mg daily after dinner"
+    },
+    {
+      "bbox": [
+        215,
+        767,
+        750,
+        817
+      ],
+      "label": "Text",
+      "content": "T. Waet 5 gpm daily at 6 P.M (1 mm)"
+    },
+    {
+      "bbox": [
+        86,
+        807,
+        142,
+        834
+      ],
+      "label": "Text",
+      "content": "Ech"
+    },
+    {
+      "bbox": [
+        78,
+        834,
+        156,
+        880
+      ],
+      "label": "Text",
+      "content": "lipid profile"
+    },
+    {
+      "bbox": [
+        173,
+        854,
+        254,
+        885
+      ],
+      "label": "Text",
+      "content": "4 mm"
+    },
+    {
+      "bbox": [
+        580,
+        441,
+        746,
+        538
+      ],
+      "label": "Text",
+      "content": "BP - 120/80 mm"
+    },
+    {
+      "bbox": [
+        257,
+        929,
+        510,
+        962
+      ],
+      "label": "Text",
+      "content": "Indraprastha Apollo Hospitals"
+    },
+    {
+      "bbox": [
+        82,
+        948,
+        741,
+        1000
+      ],
+      "label": "Text",
+      "content": "Sarla Vihar, Delhi-Mathura Road, New Delhi-110078 (India) Tel: 91-11-26625558, 26925801 Fax: 91-11-41676781 Website: www.apolloshospdelhi.com<br/>For appointment contact: 9811953538, 9899710473, 011-29871042"
+    }
+  ]
+}
